@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Pixsys.Library.QrCode.QrCodeManager</id>
+    <title>Pixsys.Library.QrCode.QrCodeManager</title>
+    <description>This manager will create QR codes using SixLabors.ImageSharp</description>
+    <authors>Sylvain Signore</authors>
+    <version>1.0.0-beta.1.0</version>
+    <readme>README.md</readme>
+    <projectUrl>https://github.com/PixsysBE/Pixsys.Library.QrCode.QrCodeManager</projectUrl>
+    <dependencies>
+      <group targetFramework="net8.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\**\*.dll" target="lib" />
+    <file src="..\..\..\README.md" target="README.md" />
+  </files>
+</package>
