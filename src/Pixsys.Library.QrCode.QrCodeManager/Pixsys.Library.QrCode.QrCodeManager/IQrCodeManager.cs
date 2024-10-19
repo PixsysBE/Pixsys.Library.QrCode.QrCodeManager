@@ -4,6 +4,7 @@
 // </copyright>
 // -----------------------------------------------------------------------
 
+using Pixsys.Library.Media.Common.Models;
 using Pixsys.Library.QrCode.QrCodeManager.Models;
 
 namespace Pixsys.Library.QrCode.QrCodeManager
@@ -11,13 +12,13 @@ namespace Pixsys.Library.QrCode.QrCodeManager
     /// <summary>
     /// The Qr Code manager.
     /// </summary>
-    internal interface IQrCodeManager
+    public interface IQrCodeManager
     {
         /// <summary>
         /// Generates a QR code asynchronously.
         /// </summary>
         /// <param name="p">The parameters.</param>
-        /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-        Task GenerateAsync(GenerateQrCodeParameters p);
+        /// <returns>A <see cref="ImageProperties"/> representing the image properties.</returns>
+        Task<ImageProperties> GenerateAsync(GenerateQrCodeParameters p);
     }
 }

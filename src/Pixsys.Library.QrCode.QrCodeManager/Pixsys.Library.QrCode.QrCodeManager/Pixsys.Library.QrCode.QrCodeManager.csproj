@@ -5,13 +5,14 @@
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <IsPackable>true</IsPackable>
   </PropertyGroup>
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="CakeRelease" Version="2.1.2" />
-    <PackageReference Include="Pixsys.Library.Media.Common" Version="1.0.0-beta.2.0" />
+    <PackageReference Include="Pixsys.Library.Media.Common" Version="1.0.0-beta.5.0" />
     <PackageReference Include="Pixsys.Library.StyleCopAnalyzers" Version="1.2.0" />
     <PackageReference Include="QRCoder-ImageSharp" Version="0.10.0" />
     <PackageReference Include="SixLabors.ImageSharp" Version="3.1.5" />

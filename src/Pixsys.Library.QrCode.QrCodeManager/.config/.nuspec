@@ -5,15 +5,20 @@
     <title>Pixsys.Library.QrCode.QrCodeManager</title>
     <description>This manager will create QR codes using SixLabors.ImageSharp</description>
     <authors>Sylvain Signore</authors>
-    <version>1.0.0-beta.1.0</version>
+    <version>0.0.0.0</version>
     <readme>README.md</readme>
     <projectUrl>https://github.com/PixsysBE/Pixsys.Library.QrCode.QrCodeManager</projectUrl>
     <dependencies>
-      <group targetFramework="net8.0" />
+      <group targetFramework="net8.0" >
+        <dependency id="Pixsys.Library.Media.Common" version="1.0.0-beta.5.0" />
+        <dependency id="SixLabors.ImageSharp" version="3.1.5" />
+        <dependency id="QRCoder-ImageSharp" version="0.10.0" />
+      </group>
     </dependencies>
   </metadata>
   <files>
     <file src="bin\Release\**\*.dll" target="lib" />
+    <file src="bin\Release\**\*.xml" target="lib" />
     <file src="..\..\..\README.md" target="README.md" />
   </files>
 </package>

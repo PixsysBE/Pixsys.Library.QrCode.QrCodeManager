@@ -32,14 +32,16 @@ public MyController(IQrCodeManager qrCodeManager)
 #### 1.2.2 Manager Methods
 
 ```csharp
-await _qrCodeManager.Generate(new Pixsys.Library.Models.GenerateQrCodeParameters
+
+var destinationFolder = "path/to/folder";
+await _qrCodeManager.GenerateAsync(new Pixsys.Library.QrCode.QrCodeManager.Models.GenerateQrCodeParameters
 {
-    Content = <CONTENT>,
-    Format = <FORMAT>,
-    BackgroundColor = <BACKGROUND_COLOR>,
-    ForegroundColor = <FOREGROUND_COLOR>,
-    Size = <SIZE>,
-    DestinationFolder = <DESTINATION_FOLDER>,
-    DestinationFileName = <DESTINATION_FILE_NAME>
+    Content = "Hello World !",
+    Format = Pixsys.Library.Media.Common.Enums.ImageFormat.Webp,
+    BackgroundColor = SixLabors.ImageSharp.Color.White,
+    ForegroundColor = SixLabors.ImageSharp.Color.Black,
+    Size = new SixLabors.ImageSharp.Size(200, 200),
+    DestinationFolder = Directory.CreateDirectory(destinationFolder),
+    DestinationFileName = "hello_world"
 });
 ```

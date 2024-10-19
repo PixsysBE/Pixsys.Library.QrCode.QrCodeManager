@@ -5,6 +5,7 @@
 // -----------------------------------------------------------------------
 
 using Pixsys.Library.Media.Common.Extensions;
+using Pixsys.Library.Media.Common.Models;
 using Pixsys.Library.QrCode.QrCodeManager.Models;
 using QRCoder;
 using SixLabors.ImageSharp.Processing;
@@ -20,7 +21,7 @@ namespace Pixsys.Library.QrCode.QrCodeManager
     {
         /// <inheritdoc />
         [SuppressMessage("StyleCop.CSharp.SpacingRules", "SA1000:KeywordsMustBeSpacedCorrectly", Justification = "Reviewed.")]
-        public async Task GenerateAsync(GenerateQrCodeParameters p)
+        public async Task<ImageProperties> GenerateAsync(GenerateQrCodeParameters p)
         {
             try
             {
@@ -29,7 +30,7 @@ namespace Pixsys.Library.QrCode.QrCodeManager
                 QRCode qrCode = new(qrCodeData);
                 SixLabors.ImageSharp.Image qrCodeImage = qrCode.GetGraphic(20, p.ForegroundColor, p.BackgroundColor, true);
                 qrCodeImage.Mutate(x => x.Resize(p.Size.Width, p.Size.Height));
-                _ = await qrCodeImage.SaveImageAsync(p.DestinationFolder, p.DestinationFileName, string.Empty, p.Format);
+                return await qrCodeImage.SaveImageAsync(p.DestinationFolder, p.DestinationFileName, string.Empty, p.Format);
             }
             catch (Exception)
             {

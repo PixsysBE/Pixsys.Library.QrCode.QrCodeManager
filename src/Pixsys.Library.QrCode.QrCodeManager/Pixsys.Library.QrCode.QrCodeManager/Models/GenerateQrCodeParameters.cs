@@ -57,7 +57,7 @@ namespace Pixsys.Library.QrCode.QrCodeManager.Models
         public required DirectoryInfo DestinationFolder { get; set; }
 
         /// <summary>
-        /// Gets or sets the name of the destination file.
+        /// Gets or sets the name of the destination file, without extension.
         /// </summary>
         /// <remarks>If filename contains an extension it will be replaced by the specified format.</remarks>
         public required string DestinationFileName { get; set; }

@@ -12,7 +12,7 @@ namespace Pixsys.Library.QrCode.QrCodeManager
     /// <summary>
     /// The QR Code Manager extensions.
     /// </summary>
-    internal static class QrCodeManagerExtensions
+    public static class QrCodeManagerExtensions
     {
         /// <summary>
         /// Adds QR Code Manager.
